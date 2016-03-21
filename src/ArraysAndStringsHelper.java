@@ -12,6 +12,7 @@ public class ArraysAndStringsHelper {
 		
 		String nonUnique = "Matthew";
 		String unique = "Ketchup";
+		String hello = "Hello World Test";
 		
 		//question 1.1
 		System.out.println("1.1: Find if a string has all unique characters");
@@ -24,6 +25,11 @@ public class ArraysAndStringsHelper {
 		arraysAndStrings.reverseString(nonUnique);
 		System.out.println();
 		
+		
+		//question 1.4
+		System.out.println("1.4: Implement a function to replaces spaces in a string with %20");
+		arraysAndStrings.replaceSpaces(hello);
+		System.out.println();
 	}
 
 	

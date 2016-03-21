@@ -71,6 +71,53 @@ public class ArraysAndStrings {
 		for(int i = 0; i<inputArr.length; i++){
 			System.out.print(inputArr[i]);
 		}
-		
+		System.out.println();
 	}
+	
+	/**
+	 * Question 1.4
+	 * Write a function to replace all spaces in a string with %20
+	 * 
+	 * NB since using JAVA, use a char array so that you can do it in place
+	 * Outline: For each of the characters in a character array, if the character is a space, replace it with %20
+	 * Note that there are 3 characters to replace 1, so you will need to push out the remainder
+	 * 
+	 * Solution is to first determine how many spaces you need to replace in the string, 
+	 * Then generate a new string(char array) of apropriate length
+	 */
+	public void replaceSpaces(String input){
+		char[] inputString = input.toCharArray();
+		int numSpaces = 0;
+		System.out.println("Replace spaces of: " + input + " with '%20'");
+		for(int i = 0; i < inputString.length; i++){
+			//check if the cur is a space, increment num spaces if yes
+			if(inputString[i] == ' '){
+				numSpaces++;
+			}
+		}
+		//since we need 2 new slots for each space, multiply numSpaces *2
+		numSpaces = numSpaces*2;
+		numSpaces += inputString.length;
+		//now generate a new char array of length string + numspaces
+		char[] newString = new char[numSpaces];
+		for(int i=inputString.length -1; i>=0; i--){
+			if (inputString[i] == ' '){
+				newString[numSpaces-1] = '0';
+				newString[numSpaces-2] = '2';
+				newString[numSpaces-3] = '%';
+				numSpaces -= 3;
+			} else {
+				newString[numSpaces -1] = inputString[i];
+				numSpaces--;
+			}
+		}
+		
+		//print the string
+		System.out.print("Final Result: ");
+		for(int i = 0; i < newString.length; i++){
+			System.out.print(newString[i]);
+		}
+		System.out.println();
+	}
+	
 }
