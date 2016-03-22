@@ -10,6 +10,10 @@ public class interviewPrep {
 		ArraysAndStringsHelper aashelper = new ArraysAndStringsHelper();
 		aashelper.runChapter1();
 		
+		//call the Linked Lists helper and run the problens
+		LinkedListsHelper llhelper = new LinkedListsHelper();
+		llhelper.runChapter2();
+		
 	}
 	
 }
