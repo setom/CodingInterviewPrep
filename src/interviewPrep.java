@@ -11,9 +11,12 @@ public class interviewPrep {
 		aashelper.runChapter1();
 		
 		//call the Linked Lists helper and run the problens
-		LinkedListsHelper llhelper = new LinkedListsHelper();
-		llhelper.runChapter2();
+//		LinkedListsHelper llhelper = new LinkedListsHelper();
+//		llhelper.runChapter2();
 		
+		//call the Stacks and Queues helper and run the problemns
+//		StacksAndQueuesHelper saqhelper = new StacksAndQueuesHelper();
+//		saqhelper.runChapter3();
 	}
 	
 }
